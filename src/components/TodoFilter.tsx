@@ -30,7 +30,7 @@ export default function TodoFilter({ filter, setFilter }: TodoFilterProps) {
       <button
         onClick={() => setFilter("completed")}
         className={`px-3 py-1 rounded transition-colors ${
-          filter === "active"
+          filter === "completed"
             ? "bg-blue-500 text-white"
             : "bg-gray-200 hover:bg-gray-300"
         }`}
