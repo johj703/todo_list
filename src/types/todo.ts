@@ -1,9 +1,9 @@
 export interface Todo {
-    id: string,
-    title: string;
-    complete: boolean;
+  id: string;
+  title: string;
+  completed: boolean;
 }
 
 export interface TodoFormData {
-    title: string;
+  title: string;
 }
