@@ -45,13 +45,13 @@ export default function TodoItem({ todo }: TodoItemProps) {
     deleteMutation.mutate(todo.id);
   };
   return (
-    <div className="">
-      <div className="">
+    <div className="flex items-center justify-between p-3 border-b">
+      <div className="flex items-center gap-2 flex-grow">
         <input
           type="checkbox"
           checked={todo.completed}
           onChange={handleToggleComplete}
-          className=""
+          className="h-5 w-5"
           disabled={updateMutation.isPending}
         />
 
@@ -60,25 +60,31 @@ export default function TodoItem({ todo }: TodoItemProps) {
             type="text"
             value={editedTitle}
             onChange={(e) => setEditedTitle(e.target.value)}
-            className=""
+            className="flex-grow p-1 border rounded"
             autoFocus
           />
         ) : (
-          <span className="">{todo.title}</span>
+          <span
+            className={`flex-grow ${
+              todo.completed ? `line-through text-gray-500` : ""
+            }`}
+          >
+            {todo.title}
+          </span>
         )}
       </div>
 
-      <div className="">
+      <div className="flex gap-2">
         <button
           onClick={handleEdit}
-          className=""
+          className="px-2 py-1 bg-yellow-500 text-white rounded text-sm hover:bg-yellow-600 transition-colors"
           disabled={updateMutation.isPending}
         >
           {isEditing ? "저장" : "수정"}
         </button>
         <button
           onClick={handleDelete}
-          className=""
+          className="px-2 py-1 bg-red-500 text-white rounded text-sm hover:bg-red-600 transition-colors"
           disabled={deleteMutation.isPending}
         >
           삭제
