@@ -30,3 +30,31 @@ export const createTodo = async (todoData: TodoFormData): Promise<Todo> => {
 
   return response.json();
 };
+
+// Todo 항목 업데이트
+export const updateTodo = async (todo: Todo): Promise<Todo> => {
+  const response = await fetch(`${API_URL}/todos/${todo.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(todo),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to update todo");
+  }
+
+  return response.json();
+};
+
+// Todo 항목 삭제
+export const deleteTodo = async (id: string): Promise<void> => {
+  const response = await fetch(`${API_URL}/todos/${id}`, {
+    method: "DELETE",
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to delete todo");
+  }
+};
