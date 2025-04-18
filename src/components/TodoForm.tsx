@@ -31,8 +31,9 @@ export default function TodoForm() {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="할 일을 입력하세요."
           className=""
+          disabled={createMutation.isPending}
         />
-        <button type="submit" className="">
+        <button type="submit" className="" disabled={createMutation.isPending}>
           추가
         </button>
       </div>
