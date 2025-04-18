@@ -31,13 +31,13 @@ export default function TodoList() {
   if (isError) return <div>에러가 발생했습니다.</div>;
 
   return (
-    <div>
-      <h1>Todo List</h1>
+    <div className="max-w-md mx-auto mt-8 p-4 bg-white rounded shadow">
+      <h1 className="text-2xl font-bold mb-4">Todo List</h1>
       <TodoForm />
       <TodoFilter filter={filter} setFilter={setFilter} />
-      <div>
+      <div className="space-y-1">
         {filteredTodos?.length === 0 ? (
-          <p>할 일이 없습니다.</p>
+          <p className="text-center text-gray-500">할 일이 없습니다.</p>
         ) : (
           filteredTodos?.map((todo: Todo) => (
             <TodoItem key={todo.id} todo={todo} />
