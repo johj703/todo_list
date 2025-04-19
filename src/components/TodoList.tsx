@@ -20,15 +20,8 @@ export default function TodoList() {
     isLoading,
     isError,
   } = useQuery({
-    queryKey: ["todos"],
-    queryFn: fetchTodos,
-  });
-
-  const filteredTodos = todos?.filter((todo: Todo) => {
-    if (filter === "all") return true;
-    if (filter === "active") return !todo.completed;
-    if (filter === "completed") return todo.completed;
-    return true;
+    queryKey: ["todos", filter],
+    queryFn: () => fetchTodos(filter),
   });
 
   if (isLoading) return <div>로딩 중</div>;
@@ -54,14 +47,12 @@ export default function TodoList() {
           {/* 요구사항 1: Todo CRUD - 읽기(R) 기능 */}
           {/* 할 일 목록 */}
           <div className="space-y-2">
-            {filteredTodos?.length === 0 ? (
+            {todos?.length === 0 ? (
               <p className="text-center text-gray-500 py-4">
                 할 일이 없습니다.
               </p>
             ) : (
-              filteredTodos?.map((todo: Todo) => (
-                <TodoItem key={todo.id} todo={todo} />
-              ))
+              todos?.map((todo: Todo) => <TodoItem key={todo.id} todo={todo} />)
             )}
           </div>
         </div>
