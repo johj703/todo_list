@@ -65,12 +65,27 @@ yarn dev
 
 ### 배포된 서비스 사용시 주의 사항
 
-- Vercel에서 배포된 서비스를 사용할 경우에도 로컬에서 json-server를 실행해야 합니다.
-- 아래 명령어로 json-server를 실행한 후 배포된 URL에 접속하세요.
+- Vercel에서 배포된 서비스를 사용하려면 먼저 프로젝트를 로컬에 클론하고 json-server를 실행해야 합니다.
+  1. 프로젝트 클론 및 디렉토리 이동
+
+```bash
+git clone https://github.com/johj703/todo-list.git
+cd todo-list
+```
+
+2. 의존성 설치
+
+```bash
+yarn install
+```
+
+3. json-server 실행
 
 ```bash
 yarn json-server
 ```
+
+4. 이제 배포된 URL(https://todo-list-johj703.vercel.app)에 접속하여 서비스를 이용할 수 있습니다.
 
 - 이는 개발 목적의 설정이며, 데이터는 json-server가 실행되는 로컬 환경에 저장됩니다.
 
