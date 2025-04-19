@@ -4,7 +4,7 @@ Next.js, TypeScript, TanStack Query를 사용한 할 일 관리 웹 애플리케
 
 ## 배포 주소
 
-🔗 [https://todo-list-johj703.vercel.app](https://todo-list-johj703.vercel.app)
+🔗 [https://todo-list-johj703s-projects.vercel.app/](https://todo-list-johj703s-projects.vercel.app/)
 
 > **참고**: 배포된 서비스를 사용하려면 로컬에서 json-server를 실행해야 합니다. 아래 '배포된 서비스 사용 시 주의 사항' 섹션을 참고해주세요.
 
