@@ -9,8 +9,12 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchTodos } from "@/api/todoApi";
 
 export default function TodoList() {
+  // 요구사항 2: 완료 상태를 별도로 확인할 수 있는 필터/탭 기능
   const [filter, setFilter] = useState<"all" | "active" | "completed">("all");
 
+  // 요구사항 3: 서버 상태 관리(react-query)와 비동기 로직 처리
+  // (useQuery 훅을 사용해 서버에서 데이터를 가져오고 캐싱, 로딩 상태와 에러 상태 관리)
+  // 요구사항 1: Todo CRUD - 읽기(R) 기능
   const {
     data: todos,
     isLoading,
@@ -37,14 +41,17 @@ export default function TodoList() {
           <h1 className="text-xl sm:text-2xl font-bold text-center mb-4">
             Todo List
           </h1>
+          {/* 요구사항 1: Todo CRUD - 생성(C) 기능 */}
           {/* 할 일 입력 폼 */}
           <TodoForm />
 
+          {/* 요구사항 2: 완료 상태를 별도로 확인할 수 있는 필터/탭 기능 */}
           {/* 필터 버튼 */}
           <div className="mb-4">
             <TodoFilter filter={filter} setFilter={setFilter} />
           </div>
 
+          {/* 요구사항 1: Todo CRUD - 읽기(R) 기능 */}
           {/* 할 일 목록 */}
           <div className="space-y-2">
             {filteredTodos?.length === 0 ? (

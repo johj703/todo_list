@@ -14,6 +14,9 @@ export default function TodoItem({ todo }: TodoItemProps) {
   const [editedTitle, setEditedTitle] = useState(todo.title);
   const queryClient = useQueryClient();
 
+  // 요구사항 3: 서버 상태 관리(react-query)와 비동기 로직 처리
+  // (useMutation 훅을 사용한 업데이트 및 삭제 요청, 성공 시 캐시 무효화로 UI 자동 업데이트)
+  // 요구사항 1: Todo CRUD - 수정(U) 기능
   const updateMutation = useMutation({
     mutationFn: updateTodo,
     onSuccess: () => {
@@ -21,18 +24,18 @@ export default function TodoItem({ todo }: TodoItemProps) {
       setIsEditing(false);
     },
   });
-
+  // 요구사항 1: Todo CRUD - 삭제(D) 기능
   const deleteMutation = useMutation({
     mutationFn: deleteTodo,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["todos"] });
     },
   });
-
+  // 요구사항 1: Todo CRUD - 수정(U) 기능 - 완료 상태 토글
   const handleToggleComplete = () => {
     updateMutation.mutate({ ...todo, completed: !todo.completed });
   };
-
+  // 요구사항 1: Todo CRUD - 수정(U) 기능 - 제목 수정
   const handleEdit = () => {
     if (isEditing && editedTitle.trim() !== "") {
       updateMutation.mutate({ ...todo, title: editedTitle });
@@ -40,7 +43,7 @@ export default function TodoItem({ todo }: TodoItemProps) {
       setIsEditing(!isEditing);
     }
   };
-
+  // 요구사항 1: Todo CRUD - 삭제(D) 기능
   const handleDelete = () => {
     deleteMutation.mutate(todo.id);
   };

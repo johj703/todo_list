@@ -8,6 +8,9 @@ export default function TodoForm() {
   const [title, setTitle] = useState("");
   const queryClient = useQueryClient();
 
+  // 요구사항 3: 서버 상태 관리(react-query)와 비동기 로직 처리
+  // (useMutation 훅을 사용해 서버에 데이터 생성 요청, 요청 성공 시 캐시 무효화 및 UI 업데이트)
+  // 요구사항 1: Todo CRUD - 생성(C) 기능
   const createMutation = useMutation({
     mutationFn: createTodo,
     onSuccess: () => {
