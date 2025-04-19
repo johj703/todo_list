@@ -99,28 +99,33 @@ todo-list/
 
 ### 1. 할 일 추가
 
-![할 일 추가](./public/WebP/add-todo.webp)
 입력 필드에 할 일을 입력하고 추가 버튼을 클릭하여 새로운 할 일을 추가합니다.
+
+![할 일 추가](./public/WebP/add-todo.webp)
 
 ### 2. 할 일 완료 표시
 
-![할 일 완료 표시](./public/WebP/complete-todo.webp)
 체크박스를 클릭하여 할 일의 완료 상태를 토글합니다.
+
+![할 일 완료 표시](./public/WebP/complete-todo.webp)
 
 ### 3. 할 일 수정
 
-![할 일 수정](./public/WebP/edit-todo.webp)
 수정 버튼을 클릭하여 할 일의 내용을 수정합니다.
+
+![할 일 수정](./public/WebP/edit-todo.webp)
 
 ### 4. 할 일 삭제
 
-![할 일 삭제](./public/WebP/delete-todo.webp)
 삭제 버튼을 클릭하여 할 일을 삭제합니다.
+
+![할 일 삭제](./public/WebP/delete-todo.webp)
 
 ### 5. 할 일 필터링
 
-![할 일 필터링](./public/WebP/filter-todos.webp)
 상단의 필터 버튼(전체, 활성, 완료)을 사용하여 할 일 목록을 필터링 합니다.
+
+![할 일 필터링](./public/WebP/filter-todos.webp)
 
 ## 라이센스
 
