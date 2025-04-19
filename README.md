@@ -32,7 +32,7 @@ Next.js, TypeScript, TanStack Query를 사용한 할 일 관리 웹 애플리케
 ## 기술 스택
 
 - **프론트엔드**: Next.js(App Router), React, TypeScript
-- **상태 관리**: TanStack Query
+- **서버 상태 관리**: TanStack Query
 - **스타일링**: Tailwind CSS
 - **백엔드 목업**: json-server
 
