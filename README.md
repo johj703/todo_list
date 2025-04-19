@@ -55,6 +55,17 @@ yarn dev
 
 4. 브라우저에서 'http://localhost:3000' 접속
 
+### 배포된 서비스 사용시 주의 사항
+
+- Vercel에서 배포된 서비스를 사용할 경우에도 로컬에서 json-server를 실행해야 합니다.
+- 아래 명령어로 json-server를 실행한 후 배포된 URL에 접속하세요.
+
+```bash
+yarn json-server
+```
+
+- 이는 개발 목적의 설정이며, 데이터는 json-server가 실행되는 로컬 환경에 저장됩니다.
+
 ## 프로젝트 구조
 
 ```
