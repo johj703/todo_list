@@ -24,18 +24,18 @@ export default function TodoForm() {
   };
   return (
     <form onSubmit={handleSubmit} className="mb-4">
-      <div className="flex gap-2">
+      <div className="flex flex-col sm:flex-row gap-2">
         <input
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="할 일을 입력하세요."
-          className="flex-grow p-2 border rounded"
+          className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
           disabled={createMutation.isPending}
         />
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+          className="w-full sm:w-auto px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-700"
           disabled={createMutation.isPending}
         >
           추가

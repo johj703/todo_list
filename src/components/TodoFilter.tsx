@@ -6,14 +6,14 @@ interface TodoFilterProps {
 }
 export default function TodoFilter({ filter, setFilter }: TodoFilterProps) {
   return (
-    <div className="">
+    <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
       <button
         onClick={() => setFilter("all")}
         className={`px-3 py-1 rounded transition-colors ${
           filter === "all"
             ? "bg-blue-500 text-white"
             : "bg-gray-200 hover:bg-gray-300"
-        }`}
+        } flex-1 sm:flex-none`}
       >
         전체
       </button>
@@ -23,7 +23,7 @@ export default function TodoFilter({ filter, setFilter }: TodoFilterProps) {
           filter === "active"
             ? "bg-blue-500 text-white"
             : "bg-gray-200 hover:bg-gray-300"
-        }`}
+        } flex-1 sm:flex-none`}
       >
         활성
       </button>
@@ -33,7 +33,7 @@ export default function TodoFilter({ filter, setFilter }: TodoFilterProps) {
           filter === "completed"
             ? "bg-blue-500 text-white"
             : "bg-gray-200 hover:bg-gray-300"
-        }`}
+        } flex-1 sm:flex-none`}
       >
         완료
       </button>

@@ -45,8 +45,8 @@ export default function TodoItem({ todo }: TodoItemProps) {
     deleteMutation.mutate(todo.id);
   };
   return (
-    <div className="flex items-center justify-between p-3 border-b">
-      <div className="flex items-center gap-2 flex-grow">
+    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3 border rounded-lg shadow-sm bg-white">
+      <div className="flex items-center gap-2 w-full sm:w-auto mb-2 sm:mb-0">
         <input
           type="checkbox"
           checked={todo.completed}
@@ -60,31 +60,31 @@ export default function TodoItem({ todo }: TodoItemProps) {
             type="text"
             value={editedTitle}
             onChange={(e) => setEditedTitle(e.target.value)}
-            className="flex-grow p-1 border rounded"
+            className="flex-grow w-full p-1 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
             autoFocus
           />
         ) : (
           <span
             className={`flex-grow ${
               todo.completed ? `line-through text-gray-500` : ""
-            }`}
+            } break-words`}
           >
             {todo.title}
           </span>
         )}
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 w-full sm:w-auto justify-end">
         <button
           onClick={handleEdit}
-          className="px-2 py-1 bg-yellow-500 text-white rounded text-sm hover:bg-yellow-600 transition-colors"
+          className="px-2 py-1 bg-yellow-500 text-white rounded text-sm hover:bg-yellow-600 transition-colors focus:outline-none focus:ring-2 focus:ring-yellow-700"
           disabled={updateMutation.isPending}
         >
           {isEditing ? "저장" : "수정"}
         </button>
         <button
           onClick={handleDelete}
-          className="px-2 py-1 bg-red-500 text-white rounded text-sm hover:bg-red-600 transition-colors"
+          className="px-2 py-1 bg-red-500 text-white rounded text-sm hover:bg-red-600 transition-colors focus:outline-none focus:ring-2 focus:ring-red-700"
           disabled={deleteMutation.isPending}
         >
           삭제
