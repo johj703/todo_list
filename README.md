@@ -66,7 +66,8 @@ yarn dev
 ### 배포된 서비스 사용시 주의 사항
 
 - Vercel에서 배포된 서비스를 사용하려면 먼저 프로젝트를 로컬에 클론하고 json-server를 실행해야 합니다.
-  1. 프로젝트 클론 및 디렉토리 이동
+
+1. 프로젝트 클론 및 디렉토리 이동
 
 ```bash
 git clone https://github.com/johj703/todo-list.git
