@@ -2,12 +2,24 @@
 
 Next.js, TypeScript, TanStack Query를 사용한 할 일 관리 웹 애플리케이션입니다.
 
-## 주요 기능
+## 주요 요구사항(기능)
 
 - 할 일 추가, 조회, 수정, 삭제 기능(CRUD)
 - 완료 상태에 따른 필터링 기능
 - TanStack Query를 활용한 서버 상태 관리
 - TypeScript를 사용한 타입 안정성
+
+## 단계별 세팅 가이드
+
+- Todo 구현
+
+  - CRUD: 생성(Create), 조회(Read), 수정(Update), 삭제(Delete)
+  - 완료된 필터링: json-server에서 필터된 데이터 가져오기
+  - UI/UX: CSS 프레임워크(예: TailwindCSS) 사용, 반응형 고려
+
+- 빌드 및 배포
+  - 빌드 후 프로덕션 서버를 열어 정상 작동하는지 확인
+  - Vercel 등 플랫폼에 배포
 
 ## 기술 스택
 
