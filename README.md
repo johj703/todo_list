@@ -2,6 +2,12 @@
 
 Next.js, TypeScript, TanStack Query를 사용한 할 일 관리 웹 애플리케이션입니다.
 
+## 배포 주소
+
+🔗 [https://todo-list-johj703.vercel.app](https://todo-list-johj703.vercel.app)
+
+> **참고**: 배포된 서비스를 사용하려면 로컬에서 json-server를 실행해야 합니다. 아래 '배포된 서비스 사용 시 주의 사항' 섹션을 참고해주세요.
+
 ## 주요 요구사항(기능)
 
 - 할 일 추가, 조회, 수정, 삭제 기능(CRUD)
