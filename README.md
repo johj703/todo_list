@@ -52,7 +52,21 @@ cd todo-list
 yarn install
 ```
 
-3. 개발 서버 실행
+3. json-server 설치
+
+```bash
+yarn add --dev json-server
+```
+
+4. 포트 설정 확인 - package.json 파일에서 다음과 같이 포트가 4000으로 설정되어 있는지 확인하세요:
+
+```bash
+"scripts": {
+  "json-server": "json-server --watch db.json --port 4000"
+}
+```
+
+5. 개발 서버 실행
 
 ```bash
 # 터미널 1: json-server 실행
@@ -62,7 +76,7 @@ yarn json-server
 yarn dev
 ```
 
-4. 브라우저에서 'http://localhost:3000' 접속
+6. 브라우저에서 'http://localhost:3000' 접속
 
 ### 배포된 서비스 사용 시 주의 사항
 
