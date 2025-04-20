@@ -39,6 +39,10 @@ Next.js, TypeScript, TanStack Query를 사용한 할 일 관리 웹 애플리케
 
 ## 설치 방법
 
+⚠️ **이 애플리케이션은 로컬 json-server 연결이 필수적입니다**
+
+로컬 개발환경에서 애플리케이션을 실행하려면 다음 단계를 따라주세요:
+
 1. Repository 클론
 
 ```bash
