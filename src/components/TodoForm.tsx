@@ -33,12 +33,12 @@ export default function TodoForm() {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="할 일을 입력하세요."
-          className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full sm:w-4/5 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
           disabled={createMutation.isPending}
         />
         <button
           type="submit"
-          className="w-full sm:w-auto px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-700"
+          className="w-full sm:w-1/5 min-w-[80px] text-center px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-700"
           disabled={createMutation.isPending}
         >
           추가
