@@ -6,9 +6,10 @@ Next.js, TypeScript, TanStack Query를 사용한 할 일 관리 웹 애플리케
 
 🔗 [https://todo-list-johj703s-projects.vercel.app/](https://todo-list-johj703s-projects.vercel.app/)
 
-> **참고**
-> 배포된 서비스를 사용하려면 로컬에서 json-server를 실행해야 합니다.
-> 아래 '배포된 서비스 사용 시 주의 사항' 섹션을 참고해주세요.
+> ⚠️ **중요 안내**  
+> 배포된 서비스는 **로컬에서 json-server를 실행해야만** 정상적으로 동작합니다.  
+> 이는 백엔드 서버가 로컬에서만 실행되도록 설계되어 있기 때문입니다.  
+> 실제 사용을 위해서는 아래 '배포된 서비스 사용 시 주의 사항' 섹션의 단계를 따라주세요.
 
 ## 주요 요구사항(기능)
 
@@ -63,9 +64,11 @@ yarn dev
 
 4. 브라우저에서 'http://localhost:3000' 접속
 
-### 배포된 서비스 사용시 주의 사항
+### 배포된 서비스 사용 시 주의 사항
 
-- Vercel에서 배포된 서비스를 사용하려면 먼저 프로젝트를 로컬에 클론하고 json-server를 실행해야 합니다.
+⚠️ **이 애플리케이션은 로컬 json-server 연결이 필수적입니다**
+
+배포된 웹 애플리케이션([https://todo-list-johj703s-projects.vercel.app/](https://todo-list-johj703s-projects.vercel.app/))을 사용하려면 **반드시** 다음 단계에 따라 로컬에서 json-server를 실행해야 합니다:
 
 1. 프로젝트 클론 및 디렉토리 이동
 
