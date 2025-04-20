@@ -83,13 +83,27 @@ cd todo-list
 yarn install
 ```
 
-3. json-server 실행
+3. json-server 설치
+
+```bash
+yarn add --dev json-server
+```
+
+4. 포트 설정 확인 - package.json 파일에서 다음과 같이 포트가 4000으로 설정되어 있는지 확인하세요:
+
+```json
+"scripts": {
+  "json-server": "json-server --watch db.json --port 4000"
+}
+```
+
+5. json-server 실행
 
 ```bash
 yarn json-server
 ```
 
-4. 이제 배포된 URL(https://todo-list-johj703.vercel.app)에 접속하여 서비스를 이용할 수 있습니다.
+6. 이제 배포된 URL(https://todo-list-johj703.vercel.app)에 접속하여 서비스를 이용할 수 있습니다.
 
 - 이는 개발 목적의 설정이며, 데이터는 json-server가 실행되는 로컬 환경에 저장됩니다.
 
