@@ -43,7 +43,7 @@ Next.js, TypeScript, TanStack Query를 사용한 할 일 관리 웹 애플리케
 
 로컬 개발환경에서 애플리케이션을 실행하려면 다음 단계를 따라주세요:
 
-1. Repository 클론
+1. Repository 클론 및 디렉토리 이동
 
 ```bash
 git clone https://github.com/johj703/todo-list.git
@@ -90,7 +90,7 @@ yarn dev
 
 배포된 웹 애플리케이션([https://todo-list-johj703s-projects.vercel.app/](https://todo-list-johj703s-projects.vercel.app/))을 사용하려면 **반드시** 다음 단계에 따라 로컬에서 json-server를 실행해야 합니다:
 
-1. 프로젝트 클론 및 디렉토리 이동
+1. Repository 클론 및 디렉토리 이동
 
 ```bash
 git clone https://github.com/johj703/todo-list.git
